@@ -1,7 +1,8 @@
 {
 	"name": "Node.js",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "./Dockerfile",
+		"context": "."
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
@@ -17,6 +18,11 @@
             "ppa": "false"
         }
 	},
+		
+	"overrideFeatureInstallOrder": [
+		// 추가 기능 설치 순서
+      "ghcr.io/devcontainers/features/common-utils"
+    ],
 
 	// Configure tool-specific properties.
 	"customizations": {
